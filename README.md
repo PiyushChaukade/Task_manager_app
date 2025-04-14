@@ -35,63 +35,7 @@ Node.js (Recommended version: >= 14.0.0)
 
 npm (or yarn)
 
-Steps to Install
-Clone the repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/task-manager.git
-cd task-manager
-Install dependencies:
-
-Using npm:
-
-bash
-Copy
-Edit
-npm install
-Or using yarn:
-
-bash
-Copy
-Edit
-yarn install
-Start the development server:
-
-Using npm:
-
-bash
-Copy
-Edit
-npm start
-Or using yarn:
-
-bash
-Copy
-Edit
-yarn start
-Open the application in your browser at http://localhost:3000.
-
-Folder Structure
-bash
-Copy
-Edit
-/task-manager
-│
-├── /src
-│   ├── /components        # Reusable components like TaskCard, TaskList, etc.
-│   ├── /assets           # Static files (images, styles)
-│   ├── /styles           # Custom stylesheets (if not using a CSS framework)
-│   ├── App.js            # Main React component
-│   ├── index.js          # Entry point for the app
-│   └── /api              # If you have an API for managing tasks (optional)
-│
-├── /public
-│   └── index.html        # Main HTML file
-│
-├── package.json          # Project metadata and dependencies
-└── README.md             # This file
 Usage
 Adding a Task:
 Navigate to the "Add Task" section of the app.
@@ -114,28 +58,4 @@ Click the "Delete" button next to the task.
 
 Confirm deletion if prompted.
 
-Responsive Layout:
-The app will display tasks in a grid layout, which adapts based on the screen size:
-
-1 column on small screens.
-
-2 columns on medium screens.
-
-3 columns on large screens.
-
-Contributing
-We welcome contributions! If you'd like to contribute to the project, please follow these steps:
-
-Fork the repository.
-
-Create a new branch (git checkout -b feature/your-feature).
-
-Make your changes and commit them (git commit -am 'Add new feature').
-
-Push to the branch (git push origin feature/your-feature).
-
-Create a new pull request with a description of your changes.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
