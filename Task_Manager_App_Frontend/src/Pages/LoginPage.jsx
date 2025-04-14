@@ -1,0 +1,55 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Form, Button, Container, Alert } from 'react-bootstrap';
+import axios from 'axios';
+
+const Login = () => {
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:3000/api/auth/login', formData);
+      localStorage.setItem('token', res.data.token);
+      navigate('/tasks');
+    } catch (err) {
+      setError('Invalid credentials');
+    }
+  };
+
+  return (
+    <Container>
+      <h2 className="my-4">Login</h2>
+      {error && <Alert variant="danger">{error}</Alert>}
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="email" className="mb-3">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            onChange={handleChange}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="password" className="mb-3">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            name="password"
+            onChange={handleChange}
+            required
+          />
+        </Form.Group>
+        <Button type="submit">Login</Button>
+      </Form>
+    </Container>
+  );
+};
+
+export default Login;
