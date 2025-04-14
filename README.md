@@ -1,5 +1,6 @@
-Task Manager
+<h1>Task Manager</h1>
 Overview
+
 Task Manager is a web application that allows users to create, manage, edit, and delete tasks. It provides an easy-to-use interface for managing tasks, with features like editing task details, deleting tasks, and viewing tasks in a responsive, organized grid layout.
 
 Features
@@ -8,10 +9,6 @@ Create Tasks: Add new tasks with a title and description.
 Edit Tasks: Modify existing tasks' details.
 
 Delete Tasks: Remove tasks that are no longer needed.
-
-Responsive Design: The application layout is responsive, providing a smooth user experience across different screen sizes.
-
-Task Grid: Display tasks in a grid, which adapts to the screen size using either Bootstrap grid or Flexbox.
 
 Tech Stack
 Frontend:
@@ -26,9 +23,9 @@ State Management:
 
 React useState and useEffect hooks
 
-Backend (Optional):
+Backend :
 
-If applicable, could be connected to an API (e.g., Node.js, Express, MongoDB)
+ Node.js, Express
 
 Setup and Installation
 Prerequisites
